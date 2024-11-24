@@ -1,10 +1,3 @@
-# CRUISE: <u>C</u>ooperative <u>R</u>econstr<u>u</u>ction and Editing <u>i</u>n V2X <u>S</u>c<u>e</u>narios using Gaussian Splatting
-
-![main](image/main.png)
-
-> Haoran Xu, Saining Zhang, Peishuo Li, Baijun Ye, Xiaoxue Chen,  Huan-ang Gao, Jv Zheng, Xiaowei Song, Ziqiao Peng, Run Miao, Jinrang Jia, Yifeng Shi, Guangqi Yi, Hang Zhao, Hao Tang, Hongyang Li, Kaicheng Yu, Hao Zhao
-
----
 
 ### Environment
 
