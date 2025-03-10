@@ -1,16 +1,13 @@
 
+---
+
 ### Environment
 
-First, clone this repository.
-```
-git clone https://github.com/SainingZhang/CRUISE.git
-```
-
-Configure Python environment of CRUISE
+Configure Python environment
 ```
 # conda environment
-conda create -n cruise python=3.8
-conda activate cruise
+conda create -n V2Xsim python=3.8
+conda activate V2Xsim
 
 # CUDA 11.8
 pip install torch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 --index-url https://download.pytorch.org/whl/cu118

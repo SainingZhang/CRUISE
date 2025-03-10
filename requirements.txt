@@ -19,7 +19,7 @@ torchmetrics
 kornia
 roma
 imgviz
-protobuf==3.19.
+protobuf==3.19
 termcolor
 jupyter
 segment_anything
