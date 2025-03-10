@@ -1,0 +1,132 @@
+task: dair_yizhuang10_exp_1
+source_path: [
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0010_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0014_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0015_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0016_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0017_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0018_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0020_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0022_exp/0022_0_original_all_seperate_with_cooperative_pointcloud",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0023_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0025_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0030_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0032_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0033_0_original",
+  "/mnt/zhangsn/data/V2X-Seq-SPD-Processed/0034_0_original",
+  ]
+exp_name: dair_yizhuang10_exp_1
+gpus : [6]
+specified_sequence_id: [
+  '0010',
+  '0014',
+  '0015',
+  '0016',
+  '0017',
+  '0018',
+  '0020',
+  '0022',
+  '0023',
+  '0025',
+  '0030',
+  '0032',
+  '0033',
+  '0034',
+  ]
+resolution: 1
+
+data:
+  split_test: -1
+  split_train: 1
+  type: Dair_multi_seq
+  white_background: false
+  selected_frames: {
+    "0010": [0, 83],
+    "0014": [0, 125],
+    "0015": [0, 124],
+    "0016": [0, 111],
+    "0017": [0, 65],
+    "0018": [0, 103],
+    "0020": [0, 164],
+    "0022": [0, 100],
+    "0023": [0, 109],
+    "0025": [0, 133],
+    "0030": [0, 105],
+    "0032": [0, 100],
+    "0033": [0, 153],
+    "0034": [0, 112]
+    }
+  cameras: [0, 1]
+  extent: 10
+  use_colmap: false
+  filter_colmap: false 
+  box_scale: 1.0
+  use_mono_normal: false
+  use_mono_depth: false
+  # load_pcd_from: 'data/temp_ply'
+
+model:
+  gaussian:
+    sh_degree: 1 # 1
+    fourier_dim: 5
+    fourier_scale: 1.
+    flip_prob: 0.5
+  nsg:
+    include_bkgd: true
+    include_obj: false  # 这里包含 obj 会报错，因此暂时关闭
+    include_sky: true
+    opt_track: true
+
+train:
+  iterations: 50000
+  test_iterations: [7000, 20000,30000, 50000]
+  save_iterations: [7000, 20000,30000,50000]
+  checkpoint_iterations: [7000, 20000,30000,50000]
+
+optim:
+  prune_box_interval: 100
+  densification_interval: 100
+  densify_from_iter: 500
+  densify_grad_threshold_bkgd: 0.01
+  densify_grad_abs_bkgd: True
+  densify_grad_threshold_obj: 0.0002
+  densify_grad_abs_obj: False
+  densify_grad_threshold: 0.01
+  densify_until_iter: 25000
+  feature_lr: 0.0025
+  max_screen_size: 20
+  min_opacity: 0.005
+  opacity_lr: 0.05
+  opacity_reset_interval: 3000
+  percent_big_ws: 0.1
+  percent_dense: 0.01
+  position_lr_delay_mult: 0.01
+  position_lr_final: 1.6e-06
+  position_lr_init: 0.00016
+  position_lr_max_steps: 50000
+  rotation_lr: 0.001
+  scaling_lr: 0.005
+  semantic_lr: 0.01
+
+  lambda_dssim: 0.2
+  lambda_sky: 0.05
+  lambda_ego: 0.05
+  lambda_sky_scale: [1, 1, 0]
+  lambda_mask: 0.1
+  lambda_reg: 0.1
+  lambda_depth_lidar: 0.2  # 0.1
+
+  track_position_lr_delay_mult: 0.01
+  track_position_lr_init: 0.005
+  track_position_lr_final: 5.0e-5
+  track_position_max_steps: 30000
+
+  track_rotation_lr_delay_mult: 0.01
+  track_rotation_lr_init: 0.001
+  track_rotation_lr_final: 1.0e-5
+  track_rotation_max_steps: 30000
+
+render:
+  fps: 24
+  concat_cameras: [0, 1]
+  edit: false
