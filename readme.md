@@ -26,7 +26,7 @@ Configure environment for generating masks [GroudingDINO](https://github.com/IDE
 
 
 
-Configure Python environment of [Relightable3DGaussian](https://github.com/NJU-3DV/Relightable3DGaussian)
+Configure Python environment of [TRELLIS]([https://github.com/NJU-3DV/Relightable3DGaussian](https://github.com/microsoft/TRELLIS))
 
 
 
