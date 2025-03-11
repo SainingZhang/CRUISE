@@ -1,4 +1,5 @@
-
+# CRUISE: Cooperative Reconstruction and Editing in V2X Scenarios using
+Gaussian Splatting
 ---
 
 ### Environment
