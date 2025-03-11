@@ -2,6 +2,10 @@
 Gaussian Splatting
 ---
 
+
+https://github.com/user-attachments/assets/29529963-e083-4a79-9655-8271daac5512
+
+
 ### Environment
 
 Configure Python environment
