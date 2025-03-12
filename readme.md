@@ -5,8 +5,8 @@ Gaussian Splatting
 ### Demo
 
 
-https://github.com/user-attachments/assets/b3fda106-9f18-4b6a-93f8-dadc8ecec5d3
 
+https://github.com/user-attachments/assets/f89cc217-a542-459e-946f-816803e31482
 
 
 
