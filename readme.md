@@ -3,7 +3,11 @@ Gaussian Splatting
 ---
 
 ### Demo
-https://github.com/user-attachments/assets/29529963-e083-4a79-9655-8271daac5512
+
+
+https://github.com/user-attachments/assets/b3fda106-9f18-4b6a-93f8-dadc8ecec5d3
+
+
 
 
 ### Environment
