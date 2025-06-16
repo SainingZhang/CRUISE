@@ -1,5 +1,6 @@
 # CRUISE: Cooperative Reconstruction and Editing in V2X Scenarios using Gaussian Splatting
 ---
+[Saining Zhang](https://sainingzhang.github.io/), Baijun Ye, Xiaoxue Chen, [Yuantao Chen](https://tao-11-chen.github.io/), Zongzheng Zhang, Cheng Peng, Yongliang Shi, [Hao Zhao](https://sites.google.com/view/fromandto) <br />
 
 ### Demo
 
