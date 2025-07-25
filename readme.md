@@ -2,6 +2,8 @@
 
 Haoran Xu, [Saining Zhang](https://sainingzhang.github.io/), Peishuo Li, Baijun Ye, Xiaoxue Chen, Huan-ang Gao, Jv Zheng, Xiaowei Song, Ziqiao Peng, Run Miao, Jinrang Jia, Yifeng Shi, Guangqi Yi, Hang Zhao, Hao Tang, Hongyang Li, Kaicheng Yu, [Hao Zhao](https://sites.google.com/view/fromandto) <br />
 
+[[`arxiv`](https://arxiv.org/abs/2507.18473)]
+
 ### Demo
 
 
